@@ -11,10 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const returnDateInput = document.getElementById("returnDate");
     const returnDate = returnDateInput.value.trim() || "?";
 
+    const corsProxyUrl = "https://cors-anywhere.herokuapp.com/";
     const apiUrl = `https://api.travelpayouts.com/aviasales/v3/prices_for_dates?origin=${origin}&destination=${destination}&departure_at=${departDate}&return_at=${returnDate}&unique=false&sorting=price&direct=false&cy=usd&limit=100&page=1&one_way=true&token=68c8d51767738a645284362284adb3f4`;
 
     // Fetch data from the API
-    fetch(apiUrl)
+    fetch(corsProxyUrl + apiUrl)
       .then((response) => response.json())
       .then((data) => {
         // Populate the table with the fetched data
