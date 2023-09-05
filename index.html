@@ -60,13 +60,20 @@
         ></script>
       </div>
     </header>
+    <br>
+    <p>
+      <strong>Kindly Note: </strong><br>
+      As the API used in this website belongs to <strong>"AVIASALES"</strong>, which have been marked as Deprecated by them, so client search can be altered in some unpredictible way.<br>
+      Therefore it is recommended to check before launching it in production.
+    </p>
+    <br>
     <div id="flightBookingForm"">
         <h2>Flight List Via API</h2>
         <form id="bookingForm">
-          <label for="origin">Origin:</label>
+          <label for="origin">Origin: (IATA Format)</label>
           <input type="text" id="origin" name="origin" required><br><br>
           
-          <label for="destination">Destination:</label>
+          <label for="destination">Destination: (IATA Format)</label>
           <input type="text" id="destination" name="destination" required><br><br>
           
           <label for="departDate">Departure Date:</label>
@@ -77,6 +84,26 @@
           
           <button type="submit">Search Flights</button>
         </form>
+      </div>
+      <br>
+      <div>
+        <h3>Tested Parameters</h3>
+        <section>
+          <p>
+            Origin: del <br>
+            Destination: bom <br>
+            Departure Date: 05/09/2023 <br>
+            Arrival Date: 06/09/2023 <br>
+          </p>
+        </section>
+        <section>
+          <p>
+            Origin: DEL <br>
+            Destination: BOM <br>
+            Departure Date: 12/09/2023 <br>
+            Arrival Date: 19/09/2023
+          </p>
+        </section>
       </div>
       <!-- Add this modal to your HTML -->
 <div class="modal fade" id="flightDataModal" tabindex="-1" role="dialog" aria-labelledby="flightDataModalLabel" aria-hidden="true">
